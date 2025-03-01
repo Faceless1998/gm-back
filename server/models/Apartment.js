@@ -16,12 +16,12 @@ const ApartmentSchema = new mongoose.Schema(
     rooms: { type: Number, required: true },
     bedroom: { type: Number, required: true },
     bathroom: { type: Number, required: true },
-    status: { type: String, required: true },
     status: {
         type: String,
         enum: ["saled", "booked", "avaliable"],
         required: true,
       },
+      name: {type: String, required: false}
   },
   { collection: "rooms" }
 );
